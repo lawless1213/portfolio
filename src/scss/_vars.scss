@@ -1,0 +1,34 @@
+// Breakpoints
+$phone: 576;
+$tablet-portrait: 768;
+$tablet-landscape: 1024;
+$desktop: 1200;
+$desktop-wide: 1921;
+// -------------------
+
+// Container
+@use 'sass:math';
+$containerWidth: 1200;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+// -------------------
+
+// Burger Menu
+$burgerBreakpoint: $tablet-landscape;
+$burgerColor: black;
+$burgerActiveColor: white;
+// -------------------
+
+// Fonts
+$fontMain: sans-serif;
+// -------------------
+
+// Colors
+:root {
+	--bg-black-900: #f2f2fc;
+	--bg-black-100: #fdf9ff;
+	--bg-black-50: #e8dfec;
+	--text-black-900: #302e4d;
+	--text-black-700: #504e70;
+}
+// -------------------

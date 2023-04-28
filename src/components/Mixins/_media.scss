@@ -1,0 +1,16 @@
+// Media
+@mixin mediaScreen($min: 0, $max: false) {
+  $media: '(min-width: #{$min}px)';
+
+  @if $min and $max {
+    $media: '(min-width: #{$min}px) and (max-width: #{$max - 0.2}px)';
+  }
+
+  @if $min==0 and $max {
+    $media: '(max-width: #{$max - 0.2}px)';
+  }
+
+  @media #{$media} {
+    @content;
+  }
+}
