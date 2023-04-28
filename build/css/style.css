@@ -1,9 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;
+
+300;400;500;600;700&display=swap");
 :root {
   --bg-black-900: #f2f2fc;
   --bg-black-100: #fdf9ff;
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
+}
+
+:root {
+  --skin-color: #ec1839;
 }
 
 * {
@@ -74,6 +81,11 @@ h6 {
   font-size: inherit;
 }
 
+.body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
 .container {
   max-width: 1240px;
   width: 100%;
@@ -119,9 +131,116 @@ body.locked {
 .aside {
   position: fixed;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 270px;
-  min-height: 100vh;
+  height: 100%;
+  padding: 30px;
   background: var(--bg-black-100);
+  z-index: 10;
+  border-right: 1px solid var(--bg-black-50);
+}
+
+.aside .logo {
+  position: absolute;
+  top: 50px;
+}
+
+.aside .nav-toggler {
+  height: 40px;
+  width: 46px;
+  border: 1px solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 6px;
+  background: var(--bg-black-100);
+}
+
+.aside .nav-toggler span {
+  height: 2px;
+  width: 18px;
+  background: var;
+}
+
+.aside .nav {
+  margin-top: 50px;
+}
+
+.aside .nav li {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.aside .nav li:last-child {
+  margin-bottom: 0;
+}
+
+.aside .nav li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--bg-black-50);
+  color: var(--text-black-900);
+  padding: 6px 16px;
+}
+
+.aside .nav li a.active {
+  color: var(--skin-color);
+}
+
+.aside .nav li a i {
+  margin-right: 16px;
+}
+
+.logo {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.logo a {
+  position: relative;
+  padding: 16px 20px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--text-black-900);
+}
+
+.logo a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+}
+
+.logo a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+}
+
+.logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .section {
@@ -130,7 +249,6 @@ body.locked {
   right: 0;
   left: 270px;
   display: block;
-  width: 270px;
   min-height: 100vh;
   background: var(--bg-black-900);
   z-index: 0;
